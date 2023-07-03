@@ -1,4 +1,4 @@
-import { getNavbar } from '@/sanity/api-calls/projects-utils';
+import { getPages } from '@/sanity/api-calls/projects-utils';
 import Link from 'next/link'
 import React from 'react'
 import { Heart } from 'react-feather'
@@ -16,7 +16,7 @@ export default async function RootLayout({
 }:{
     children: React.ReactNode
 }){
-    const navbarPages = await getNavbar();
+    const navbarPages = await getPages();
 
     return (
 
@@ -33,7 +33,7 @@ export default async function RootLayout({
                     </Link>
                     <div className='flex  items-end gap-5 mb-1'>
                         {navbarPages.map( (navbar) => (
-                            <Link className='hover:text-gray-500' key={navbar._id} href={`/${navbar.slug}`} >
+                            <Link className='hover:text-gray-500' key={navbar._id} href={`/#${navbar.slug}`} >
                                 {navbar.title}
                             </Link>
                         ))}
@@ -49,14 +49,9 @@ export default async function RootLayout({
                         <p className='flex flex-row items-center text-lg gap-2'>Made with <Heart color="white" size={18}/> </p>
                         <p className='text-lg'>&#169; Copyright 2023 Raemil </p>
                     </div>
-                  
-              
                 </footer>
                
             </body>
-           
-
-
         </html>
     );
         

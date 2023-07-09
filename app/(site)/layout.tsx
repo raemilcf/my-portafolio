@@ -22,7 +22,7 @@ export default async function RootLayout({
 
         <html lang="en">
             <body className='flex flex-col text-gray-300 font-poppins h-screen mx-auto bg-gradient-to-b from-cyan-950 to-neutral-950'>
-                {/* navigation var  */}
+                {/* navigation bar  */}
                 <header className='sticky px-6 pt-2 flex justify-between'>
                     <Link href='/' className='flex flex-col items-center
                     bg-gradient-to-r from-pink-500 to-neutral-500 bg-clip-text text-transparent'>

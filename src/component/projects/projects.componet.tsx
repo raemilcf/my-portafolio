@@ -1,13 +1,12 @@
 import {  About } from "@/src/models/About";
 import { Projects } from "@/src/models/Projects";
-import { PortableText } from "@portabletext/react";
 import { FC } from "react";
 
 type ProjectProps = {
-    projects : Projects[];
+    c : Projects[];
 }
 
-const  About : FC<ProjectProps> =  ({ projects }) =>  {
+const  Projects : FC<ProjectProps> =  ({ projects }) =>  {
 
     return (
         <div className="grid grid-cols-3 ">
@@ -17,4 +16,4 @@ const  About : FC<ProjectProps> =  ({ projects }) =>  {
 
 };
 
-export default About;
+export default Projects;

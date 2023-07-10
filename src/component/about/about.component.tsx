@@ -1,6 +1,5 @@
-import {  About } from "@/models/About";
+import {  About } from "@/src/models/About";
 import { PortableText } from "@portabletext/react";
-import Link from "next/link";
 import { FC } from "react";
 
 type AboutProps = {

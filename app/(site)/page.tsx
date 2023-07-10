@@ -1,7 +1,5 @@
-import { getAbout } from '@/sanity/api-calls/about-utils';
-import { getPages } from '@/sanity/api-calls/projects-utils'
+import { getAbout } from '@/src/sanity/api/about-me/about-api';
 import About from '@/src/component/about/about.component';
-import { PortableText } from '@portabletext/react';
 
 
 export default async function Home() {

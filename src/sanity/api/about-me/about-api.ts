@@ -1,6 +1,6 @@
-import { About } from "@/models/About";
+import { About } from "@/src/models/About";
 import { createClient, groq } from "next-sanity";
-import sanityClientConfig from "../config/client-config";
+import sanityClientConfig from "../../config/client-config";
 
 
 export async function getAbout() :  Promise<About>{

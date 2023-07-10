@@ -1,10 +1,7 @@
-import { getPages } from '@/sanity/api-calls/projects-utils';
+import { getPages } from '@/src/sanity/api/projects/projects-utils';
 import Link from 'next/link'
 import React from 'react'
 import { Heart } from 'react-feather'
-
-
-
 
 export const metadata = {
     title: 'RC Portafolio',
@@ -44,7 +41,7 @@ export default async function RootLayout({
                 <main> 
                     {children}
                 </main>
-                <footer className='mt-auto mt-9 mb-2 '>
+                <footer className='mt-9 mb-2 '>
                     <div className='flex flex-col justify-center items-center '>
                         <p className='flex flex-row items-center text-lg gap-2'>Made with <Heart color="white" size={18}/> </p>
                         <p className='text-lg'>&#169; Copyright 2023 Raemil </p>

@@ -1,6 +1,6 @@
-const about ={
-    name: "about",
-    title: "About",
+const presentation ={
+    name: "presentation",
+    title: "Presentation",
     type: "document",
     fields: [{
         name: "title",
@@ -22,13 +22,8 @@ const about ={
         }
     },
     {
-        name:'catchPhrase1',
-        title: "CatchPhrase1",
-        type: "string",
-    },
-    {
-        name:'catchPhrase2',
-        title: "CatchPhrase2",
+        name:'header',
+        title: "Header",
         type: "string",
     },
     {
@@ -38,12 +33,18 @@ const about ={
         of:[{type: "block"}]
     },
     {
-        name:'url',
-        title: "Url",
-        type: "url"
+        name:'photo',
+        title: "Profile Photo",
+        type: "image"
+    },
+    {
+        name: 'technologies',
+        title: 'Technologies',
+        type: 'array',
+        of: [{type: 'string'}]
     }
 
 ]
 }
 
-export default about;
+export default presentation;

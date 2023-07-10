@@ -1,6 +1,6 @@
-const expirience ={
-    name: "expirience",
-    title: "Expirience",
+const experience ={
+    name: "experience",
+    title: "Experience",
     type: "document",
     fields: [{
         name: "title",
@@ -70,4 +70,4 @@ const expirience ={
 ]
 }
 
-export default expirience;
+export default experience;

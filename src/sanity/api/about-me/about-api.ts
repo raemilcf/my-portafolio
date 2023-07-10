@@ -3,7 +3,7 @@ import { createClient, groq } from "next-sanity";
 import sanityClientConfig from "../../config/client-config";
 
 
-export async function getAbout() :  Promise<About>{
+export async function getAboutMe() :  Promise<About>{
 
     return createClient(sanityClientConfig).fetch(
         groq`*[_type == 'about'] | order( _createdAt asc)[0]{

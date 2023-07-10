@@ -8,6 +8,15 @@ const projects ={
         type:'string',
     },
     {
+        name: 'slug',
+        title: 'Slug',
+        type: 'slug',
+        options : {
+            source: 'title',
+            maxLength: 96,
+        }
+    },
+    {
         name: "type",
         title:"Type",
         type:'string',
@@ -38,15 +47,6 @@ const projects ={
         name: "hidden",
         title:"Hidden",
         type:'boolean',
-    },
-    {
-        name: 'slug',
-        title: 'Slug',
-        type: 'slug',
-        options : {
-            source: 'title',
-            maxLength: 96,
-        }
     }
 
 ]

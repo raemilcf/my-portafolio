@@ -8,11 +8,6 @@ const experience ={
         type:'string',
     },
     {
-        name: "hidden",
-        title:"Hidden",
-        type:'boolean',
-    },
-    {
         name: 'slug',
         title: 'Slug',
         type: 'slug',
@@ -65,8 +60,12 @@ const experience ={
         title: 'Technologies',
         type: 'array',
         of: [{type: 'string'}]
-    }
-
+    },
+    {
+        name: "hidden",
+        title:"Hidden",
+        type:'boolean',
+    },
 ]
 }
 

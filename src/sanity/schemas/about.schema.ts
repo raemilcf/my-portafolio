@@ -8,11 +8,6 @@ const about ={
         type:'string',
     },
     {
-        name: "version",
-        title:"Version",
-        type:'number',
-    },
-    {
         name: 'slug',
         title: 'Slug',
         type: 'slug',
@@ -20,6 +15,11 @@ const about ={
             source: 'title',
             maxLength: 96,
         }
+    },
+    {
+        name: "version",
+        title:"Version",
+        type:'number',
     },
     {
         name:'catchPhrase1',

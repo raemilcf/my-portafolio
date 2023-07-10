@@ -8,11 +8,6 @@ const presentation ={
         type:'string',
     },
     {
-        name: "version",
-        title:"Version",
-        type:'number',
-    },
-    {
         name: 'slug',
         title: 'Slug',
         type: 'slug',
@@ -21,6 +16,12 @@ const presentation ={
             maxLength: 96,
         }
     },
+    {
+        name: "version",
+        title:"Version",
+        type:'number',
+    },
+  
     {
         name:'header',
         title: "Header",

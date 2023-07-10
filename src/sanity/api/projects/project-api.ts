@@ -1,9 +1,9 @@
-import { Navbar } from "@/src/models/Navbar";
+import { Projects } from "@/src/models/Projects";
 import sanityClientConfig from "@/src/sanity/config/client-config";
 import { createClient, groq } from "next-sanity";
 
 
-export async function getProjects() : Promise<Navbar[]>{
+export async function getMyProjects() : Promise<Projects[]>{
 
     return createClient(sanityClientConfig).fetch(
         groq`*[_type == 'projects' && hidden == false ] {
@@ -11,7 +11,12 @@ export async function getProjects() : Promise<Navbar[]>{
             _createdAt,
             title,
             "slug": slug.current,
-            content
+            type,
+            description,
+            technologies,
+            url,
+            github,
+            hidden
         }
         `
     )

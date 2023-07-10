@@ -5,5 +5,10 @@ export type Projects= {
     _createdAt: Date;
     title: string;
     slug: string;
-    content : PortableTextBlock[];
+    type: string;
+    description:  PortableTextBlock[];
+    technologies: string[];
+    url: string;
+    github: string;
+    hidden : boolean;
 }

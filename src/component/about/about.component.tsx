@@ -1,4 +1,5 @@
-import {  About } from "@/src/models/About";
+
+import { About } from "@/src/models/About";
 import { PortableText } from "@portabletext/react";
 import { FC } from "react";
 
@@ -22,11 +23,9 @@ const  About : FC<AboutProps> =  ({ about }) =>  {
                             text-transparent bg-clip-text ">
                                 {about.catchPhrase2}
                 </p>
-                <div className="flex flex-row w-full mr-12 pr-96">
+                <div className="text-lg flex flex-row w-full mr-12 pr-96">
                     <PortableText value={about.content}></PortableText>
-
                 </div>
-            
                 <a
                 className="mt-3 border-2 rounded-md text-center
                            bg-gradient-to-r from-pink-200 from-10% via-pink-400 via-30% to-pink-600 to-60% text-transparent bg-clip-text

@@ -1,14 +1,16 @@
-import { Projects } from "@/src/models/Projects";
 import { FC } from "react";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
+
+import { Projects } from "@/src/models/Projects";
+
 
 
 type ProjectProps = {
     project : Projects;
 }
 
-const  ProjectCard : FC<ProjectProps> =  ({ project }) =>  {
+const  ProjectCardComponent : FC<ProjectProps> =  ({ project }) =>  {
 
 
     return (
@@ -28,26 +30,26 @@ const  ProjectCard : FC<ProjectProps> =  ({ project }) =>  {
                     />
                     <div className="flex flex-row gap-3">
                         {
-                            project.github ? 
-                            <a href={project.github} target="_blank" className="mt-4" >
+                            project.github &&
+                           ( <a href={project.github} target="_blank" className="mt-4" >
                                 <Image
                                     src="/github.svg"
                                     alt={project.title}
                                     width={20}
                                     height={20}
                                 />
-                            </a> : <span></span>
+                            </a> ) 
                         }
                         {
-                            project.url ? 
-                            <a href={project.github} target="_blank" className="mt-4">
+                            project.url &&
+                            (<a href={project.github} target="_blank" className="mt-4">
                                 <Image
                                     src="/external-link.svg"
                                     alt={project.title}
                                     width={20}
                                     height={20}
                                 />
-                            </a> : <span></span>
+                            </a> )
                         }
                     </div>
                 </div>
@@ -83,4 +85,4 @@ const  ProjectCard : FC<ProjectProps> =  ({ project }) =>  {
     );
 }
 
-export default ProjectCard;
+export default ProjectCardComponent;

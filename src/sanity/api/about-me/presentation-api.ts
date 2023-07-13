@@ -14,8 +14,9 @@ export async function getProfilePresentation() : Promise<Presentation>{
             "slug": slug.current,
             version,
             header,
-            photo,
+            'photo': photo.asset -> url,
             technologies,
+            content
         }
         `
     )

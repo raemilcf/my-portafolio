@@ -1,4 +1,4 @@
-import { Image } from "sanity";
+import { Image, PortableTextBlock } from "sanity";
 
 
 export type Presentation= {
@@ -8,7 +8,8 @@ export type Presentation= {
     slug: string;
     version: number;
     header: string;
-    photo : Image;
+    photo : string;
     technologies: string[];
+    content: PortableTextBlock[];
    
 }

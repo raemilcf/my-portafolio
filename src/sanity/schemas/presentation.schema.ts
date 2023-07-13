@@ -36,7 +36,13 @@ const presentation ={
     {
         name:'photo',
         title: "Profile Photo",
-        type: "image"
+        type: "image",
+        options:{hotspot : true},
+        fields: [{
+            name: 'alt',
+            title: 'Alt',
+            type: 'string'
+        }]
     },
     {
         name: 'technologies',

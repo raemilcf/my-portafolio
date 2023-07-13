@@ -1,9 +1,11 @@
 import { getAboutMe } from '@/src/sanity/api/about-me/about-api';
-import About from '@/src/component/about/about.component';
 import { getMyProjects } from '@/src/sanity/api/projects/project-api';
 import { getWorkExperience } from '@/src/sanity/api/experience/experience-api';
 import { getProfilePresentation } from '@/src/sanity/api/about-me/presentation-api';
-import ProjectsDisplay from '@/src/component/projects/ProjectsDisplay.componet';
+
+import AboutComponent from '@/src/component/about/about.component';
+import ProjectsDisplayComponent from '@/src/component/projects/ProjectsDisplay.componet';
+import ProfileComponent from '@/src/component/about/profile.component';
 
 
 export default async function Home() {
@@ -14,9 +16,6 @@ export default async function Home() {
   const presentation = await getProfilePresentation();
   
 
-console.log(about);
-console.log(myProjects);
-console.log(experience);
 console.log(presentation);
 
 
@@ -28,8 +27,9 @@ console.log(presentation);
       </div>
 
       <div className='px-16 flex flex-col sm:py-16 lg:px-20 gap-10'>
-      <About about={about} ></About>
-      <ProjectsDisplay projects={myProjects} ></ProjectsDisplay>
+      <AboutComponent about={about} ></AboutComponent>
+      <ProfileComponent profile={presentation}></ProfileComponent>
+      <ProjectsDisplayComponent projects={myProjects} ></ProjectsDisplayComponent>
 
       </div>
 

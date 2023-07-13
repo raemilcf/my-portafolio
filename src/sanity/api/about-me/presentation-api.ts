@@ -1,5 +1,5 @@
 
-import { Presentation } from "@/src/models/presentation";
+import { Presentation } from "@/src/models/Presentation";
 import sanityClientConfig from "@/src/sanity/config/client-config";
 import { createClient, groq } from "next-sanity";
 

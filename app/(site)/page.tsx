@@ -3,7 +3,7 @@ import About from '@/src/component/about/about.component';
 import { getMyProjects } from '@/src/sanity/api/projects/project-api';
 import { getWorkExperience } from '@/src/sanity/api/experience/experience-api';
 import { getProfilePresentation } from '@/src/sanity/api/about-me/presentation-api';
-import Projects from '@/src/component/projects/projects.componet';
+import ProjectsDisplay from '@/src/component/projects/ProjectsDisplay.componet';
 
 
 export default async function Home() {
@@ -29,7 +29,7 @@ console.log(presentation);
 
       <div className='px-16 flex flex-col sm:py-16 lg:px-20 gap-10'>
       <About about={about} ></About>
-      <Projects projects={myProjects} ></Projects>
+      <ProjectsDisplay projects={myProjects} ></ProjectsDisplay>
 
       </div>
 

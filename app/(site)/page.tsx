@@ -6,6 +6,7 @@ import { getProfilePresentation } from '@/src/sanity/api/about-me/presentation-a
 import AboutComponent from '@/src/component/about/about.component';
 import ProjectsDisplayComponent from '@/src/component/projects/ProjectsDisplay.componet';
 import ProfileComponent from '@/src/component/about/profile.component';
+import ExperiencesComponent from '@/src/component/experience/experiences.component';
 
 
 export default async function Home() {
@@ -27,13 +28,14 @@ console.log(presentation);
       </div>
 
       <div className='px-16 flex flex-col sm:py-16 lg:px-20 gap-10'>
-      <AboutComponent about={about} ></AboutComponent>
+        <ExperiencesComponent experiences={experience}></ExperiencesComponent>
+      {/* <AboutComponent about={about} ></AboutComponent>
       <ProfileComponent profile={presentation}></ProfileComponent>
-      <ProjectsDisplayComponent projects={myProjects} ></ProjectsDisplayComponent>
+      <ProjectsDisplayComponent projects={myProjects} ></ProjectsDisplayComponent> */}
 
       </div>
 
-      <div className='flex '>
+      <div className='flex'>
         <h1>follow</h1>
       </div>
      

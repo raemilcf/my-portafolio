@@ -11,11 +11,15 @@ const ExperienceElementComponent : FC<experienceProps> = ( {experience} ) =>{
 
     const [elementStyle, setElementStyle] = useState("border-l-2 hover:border-pink-300");
     const [buttonStyle, setButtonStyle] = useState("inline-block p-4 hover:text-pink-300 hover:scale-110 ");
+    const[element, setElement] = useState(null);
 
 
     const changeTab = () => {
         setElementStyle("border-l-2 border-pink-500");
         setButtonStyle("inline-block p-4 text-pink-500");
+
+        setElement(experience);
+
 
     }
 

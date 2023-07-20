@@ -13,6 +13,7 @@ export type Experience= {
     from : string;
     to: string;
     hidden: boolean;
+    active: boolean;
 
    
 }

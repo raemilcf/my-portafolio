@@ -1,6 +1,6 @@
-import { usePortafolioContext } from "@/app/(site)/page";
 import { Experience } from "@/src/models/Experience"
-import { FC, useContext,   } from "react";
+import { FC } from "react";
+import { usePortafolioContext } from "../home/home.component";
 
 
 type experienceProps ={

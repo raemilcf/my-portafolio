@@ -1,4 +1,5 @@
 import { ExperienceContext } from "@/src/context/experience.context";
+import { PortableText } from "@portabletext/react";
 import { useContext } from "react";
 import ExperienceElementComponent from "./experience_element.componet";
 
@@ -7,17 +8,29 @@ import ExperienceElementComponent from "./experience_element.componet";
 const ExperiencesComponent = () => {
 
     const { experiences } = useContext(ExperienceContext);
+    console.log(experiences);
 
     //show tab with all the experience 
     return (
         <div className="grid grid-cols-6">
-             <ul className="block col-span-2" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+             <ul className="block col-span-2">
                 {
                     experiences.map( (experience) => (
                         <ExperienceElementComponent key={experience._id} experience={experience} ></ExperienceElementComponent>
                     ))
                 }
             </ul>
+            <div className="block col-span-4">
+                {
+                    experiences.map( (experience) => (
+                        <div key={experience._id} className={experience.active ? "block" : "hidden" }>
+                            
+                            <PortableText value={experience.description}></PortableText>
+                        </div>
+                    ))
+                }
+
+            </div>
 
     {/* <ul className="block col-span-2" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
         <li className="border-l-2 hover:border-pink-300">

@@ -1,3 +1,9 @@
+//The "use client" directive is a convention to declare a boundary between a 
+//Server and Client Component module graph.
+
+ // server component -elements client do not touch or have access to its modification 
+// {/* client component like button, input, search box, elements client interact with  */}
+
 'use client'
 import { createContext, FC, useEffect, useState } from "react";
 import ExperiencesTabComponent from "../component/experience/experiences.component";
@@ -69,4 +75,4 @@ export const activateExperience = (experiences : Experience[], experience : Expe
       ));
     }
     return [...experiences];
-  }
+}

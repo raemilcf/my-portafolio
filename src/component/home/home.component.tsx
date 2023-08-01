@@ -1,4 +1,3 @@
-'use client'
 import { ExperienceProvider } from "@/src/context/experience.context";
 
 const HomeComponent = () =>{

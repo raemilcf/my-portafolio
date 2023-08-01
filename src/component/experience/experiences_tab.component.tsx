@@ -1,6 +1,6 @@
 import { Experience } from "@/src/models/Experience"
 import { FC } from "react";
-import ExperienceElementComponent from "./experience.element.componet";
+import ExperienceElementComponent from "./experience_element.componet";
 
 type experienceProps = {
     experiences : Experience[];
@@ -8,7 +8,7 @@ type experienceProps = {
 
 const ExperiencesComponent : FC<experienceProps> = ( {experiences} ) => {
 
-   
+    //show tab with all the experience 
     return (
         <div className="grid grid-cols-6">
              <ul className="block col-span-2" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">

@@ -12,6 +12,7 @@ const ExperienceElementComponent : FC<experienceProps> = ( {experience} ) =>{
 
    const { isExperienceActive } = usePortafolioContext();
 
+   //highlight one experience or the other
     const changeTab = () => {
        isExperienceActive(experience);
     }

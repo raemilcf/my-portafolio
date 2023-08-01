@@ -1,22 +1,20 @@
 
 'use client'
-import { getAboutMe } from '@/src/sanity/api/about-me/about-api';
-import { getMyProjects } from '@/src/sanity/api/projects/project-api';
-import { getWorkExperience } from '@/src/sanity/api/experience/experience-api';
-import { getProfilePresentation } from '@/src/sanity/api/about-me/presentation-api';
-
-import AboutComponent from '@/src/component/about/about.component';
-import ProjectsDisplayComponent from '@/src/component/projects/ProjectsDisplay.componet';
-import ProfileComponent from '@/src/component/about/profile.component';
-import ExperiencesComponent from '@/src/component/experience/experiences.component';
-import { FC, createContext, useContext, useEffect, useState } from 'react';
+import ExperiencesComponent from '@/src/component/experience/experiences_tab.component';
+import { FC, useContext, useEffect, useState } from 'react';
 import { Experience } from '@/src/models/Experience';
+import AboutComponent from '../about/about.component';
+import ProfileComponent from '../about/profile.component';
+import ProjectsDisplayComponent from '../projects/ProjectsDisplay.componet';
+import { About } from '@/src/models/About';
+import { Projects } from '@/src/models/Projects';
+import { Presentation } from '@/src/models/Presentation';
+import { PortafolioContext } from '@/src/context/portafolio';
 
 //---------------------funtionality 
-export const activateExperience = (experiences : Experience[], experience : Experience) => {
 
-  console.log('exp', experience);
-  console.log('exp', experiences);
+//show or hide one experience and description 
+export const activateExperience = (experiences : Experience[], experience : Experience) => {
 
   if(experiences.find( (exp) => exp._id === experience._id)){
 
@@ -24,71 +22,51 @@ export const activateExperience = (experiences : Experience[], experience : Expe
       exp._id === experience._id ? { ...exp, active: !exp.active} : {...exp, active: false} 
     ));
   }
-
   return [...experiences];
 }
-
-//type of data of my context 
-interface PortafolioConextData {
-  experiences : Experience[];
-  isExperienceActive : (experience : Experience) => void;
-  loadExperiences : (experiences : Experience[]) => void;
-
-
-}
-const PortafolioContext = createContext<PortafolioConextData>({
-  experiences: [],
-  isExperienceActive : () => {},
-  loadExperiences: () => {}
-
-});
 
  // Create a helper function to use the context in components
  export function usePortafolioContext() {
   return useContext(PortafolioContext);
 }
 
-
-type experienceProps ={
-  newexperiences : Experience[];
+//load props with type
+type Props ={
+  aboutData : About;
+  presentationData: Presentation;
+  projectsList : Projects[];
+  experiencesList : Experience[];
 }
 
-
-const HomeComponent : FC<experienceProps> = ( {newexperiences} ) =>{
-
-
-  // const about = await getAboutMe();
-  // const myProjects = await getMyProjects();
-  // const experience = await getWorkExperience();
-  // const presentation = await getProfilePresentation();
-
-
+const HomeComponent : FC<Props> = ( {experiencesList, aboutData, projectsList, presentationData} ) =>{
 
   const [experiences, setExperiences] = useState<Experience[]>([]);
+  const [about, setAbout] = useState<About>(aboutData);
+  const [projects, setProjects] = useState<Projects[]>([]);
+  const [presentation, setPresentation] = useState<Presentation>(presentationData);
 
+  //load all the experiences once
   useEffect( () => {
-    setExperiences([ ...newexperiences]);
-
+    setExperiences([ ...experiencesList]);
+    setAbout(aboutData);
+    setProjects([...projectsList]);
+    setPresentation(presentationData);
   }, []);
 
   const loadExperiences = async (newExperiences: Experience[]) => {
-      setExperiences([...newexperiences]);
+      setExperiences([...newExperiences]);
   }
 
   const isExperienceActive = (experience : Experience) => {
-       // Do something with the experience (this is just a placeholder)
-       console.log("Experience active:", experience);
-       // Example of updating the state with the experience
+       // update experience active 
        setExperiences(activateExperience(experiences, experience));
-
   }
  
-
-
-
-
   // Wrap the context value in useMemo to memoize it
   const contextValue = {
+    about,
+    presentation,
+    projects,
     experiences,
     isExperienceActive,
     loadExperiences
@@ -102,10 +80,11 @@ const HomeComponent : FC<experienceProps> = ( {newexperiences} ) =>{
         </div>
 
         <div className='px-16 flex flex-col sm:py-16 lg:px-20 gap-10'>
-          <ExperiencesComponent experiences={experiences}></ExperiencesComponent>
-        {/* <AboutComponent about={about} ></AboutComponent>
+        <AboutComponent about={about} ></AboutComponent>
         <ProfileComponent profile={presentation}></ProfileComponent>
-        <ProjectsDisplayComponent projects={myProjects} ></ProjectsDisplayComponent> */}
+        <ProjectsDisplayComponent projects={projects} ></ProjectsDisplayComponent>
+        <ExperiencesComponent experiences={experiences}></ExperiencesComponent>
+
 
         </div>
 

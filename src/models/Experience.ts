@@ -10,6 +10,7 @@ export type Experience= {
     description : PortableTextBlock[];
     roles: string[];
     achievement: string[];
+    technologies: string[];
     from : string;
     to: string;
     hidden: boolean;

@@ -19,6 +19,7 @@ export async function getWorkExperience() : Promise<Experience[]>{
             roles,
             description,
             achievement,
+            technologies,
             hidden
         }
         `

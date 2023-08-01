@@ -16,6 +16,7 @@ const ExperiencesComponent = () => {
              <ul className="block col-span-2">
                 {
                     experiences.map( (experience) => (
+                        experience.hidden ? "" :
                         <ExperienceElementComponent key={experience._id} experience={experience} ></ExperienceElementComponent>
                     ))
                 }
@@ -23,15 +24,20 @@ const ExperiencesComponent = () => {
             <div className="block col-span-4">
                 {
                     experiences.map( (experience) => (
+                        experience.hidden ?  "" :
                         <div key={experience._id} className={experience.active ? "block" : "hidden" }>
-                            
+                            <p>{experience.position}</p>
+                            <p>{experience.from}</p> <span>-</span> <p>{experience.to}</p>
                             <PortableText value={experience.description}></PortableText>
+                            <p>{experience.roles}</p>
+                            <p>{experience.achievement}</p>
+                            <p>{experience.technologies}</p>
+
                         </div>
+                       
                     ))
                 }
-
             </div>
-
     {/* <ul className="block col-span-2" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
         <li className="border-l-2 hover:border-pink-300">
             <button className="inline-block p-4 hover:text-pink-300 hover:scale-110  " id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>

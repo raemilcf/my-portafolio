@@ -26,7 +26,7 @@ export const activateExperience = (experiences : Experience[], experience : Expe
 }
 
  // Create a helper function to use the context in components
- export function usePortafolioContext() {
+export function usePortafolioContext() {
   return useContext(PortafolioContext);
 }
 

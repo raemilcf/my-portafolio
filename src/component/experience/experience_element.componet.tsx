@@ -1,6 +1,6 @@
+import { ExperienceContext } from "@/src/context/experience.context";
 import { Experience } from "@/src/models/Experience"
-import { FC } from "react";
-import { usePortafolioContext } from "../home/home.component";
+import { FC, useContext } from "react";
 
 
 type experienceProps ={
@@ -10,7 +10,7 @@ type experienceProps ={
 
 const ExperienceElementComponent : FC<experienceProps> = ( {experience} ) =>{
 
-   const { isExperienceActive } = usePortafolioContext();
+   const { isExperienceActive } = useContext(ExperienceContext);
 
    //highlight one experience or the other
     const changeTab = () => {

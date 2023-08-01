@@ -1,12 +1,12 @@
-import { Experience } from "@/src/models/Experience"
-import { FC } from "react";
+import { ExperienceContext } from "@/src/context/experience.context";
+import { useContext } from "react";
 import ExperienceElementComponent from "./experience_element.componet";
 
-type experienceProps = {
-    experiences : Experience[];
-}
 
-const ExperiencesComponent : FC<experienceProps> = ( {experiences} ) => {
+
+const ExperiencesComponent = () => {
+
+    const { experiences } = useContext(ExperienceContext);
 
     //show tab with all the experience 
     return (
@@ -16,7 +16,6 @@ const ExperiencesComponent : FC<experienceProps> = ( {experiences} ) => {
                     experiences.map( (experience) => (
                         <ExperienceElementComponent key={experience._id} experience={experience} ></ExperienceElementComponent>
                     ))
-
                 }
             </ul>
 

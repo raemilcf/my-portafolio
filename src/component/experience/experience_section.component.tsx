@@ -24,22 +24,22 @@ const ExperienceSectionComponent : FC<Props> = ( {experience} ) => {
             <PortableText value={experience.description}></PortableText>
         </div>
 
-        <div className="mt-3">
+        <div className="mt-4">
         {
             experience.roles.map( (role) => (
                 <div  key={role} className="flex flex-row mb-2">
                     <Image 
-                    src="/chevron-right.svg"
+                    src="/target.svg"
                     width={18}
                     height={18}
                     alt="right"
                     />
-                    <p className="text-sm">{role}</p> 
+                    <p className="text-sm ml-1">{role}</p> 
                 </div>
             ))
         }
         </div>
-        <div className="mt-3">
+        <div className="mt-4">
         {
             experience.achievement.map( (achiv) => (
                 <div  key={achiv} className="flex flex-row mb-2">
@@ -49,7 +49,7 @@ const ExperienceSectionComponent : FC<Props> = ( {experience} ) => {
                     height={18}
                     alt="right"
                     />
-                    <p className="text-sm"> {achiv} </p>
+                    <p className="text-sm ml-1"> {achiv} </p>
                                 
                 </div>
             ))      

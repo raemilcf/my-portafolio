@@ -8,7 +8,7 @@ type experienceProps ={
 }
 
 
-const ExperienceElementComponent : FC<experienceProps> = ( {experience} ) =>{
+const ExperienceTabComponent : FC<experienceProps> = ( {experience} ) =>{
 
    const { isExperienceActive } = useContext(ExperienceContext);
 
@@ -36,7 +36,7 @@ const ExperienceElementComponent : FC<experienceProps> = ( {experience} ) =>{
     )
 }
 
-export default ExperienceElementComponent;
+export default ExperienceTabComponent;
 
 
 

@@ -1,7 +1,8 @@
 import { ExperienceContext } from "@/src/context/experience.context";
-import { PortableText } from "@portabletext/react";
 import { useContext } from "react";
-import ExperienceElementComponent from "./experience_element.componet";
+import ExperienceSectionComponent from "./experience_section.component";
+
+import ExperienceElementComponent from "./experience_tab.componet";
 
 
 
@@ -12,8 +13,8 @@ const ExperiencesComponent = () => {
 
     //show tab with all the experience 
     return (
-        <div className="grid grid-cols-6">
-             <ul className="block col-span-2">
+        <div className="grid grid-cols-5">
+             <ul className="block col-span-1">
                 {
                     experiences.map( (experience) => (
                         experience.hidden ? "" :
@@ -24,17 +25,7 @@ const ExperiencesComponent = () => {
             <div className="block col-span-4">
                 {
                     experiences.map( (experience) => (
-                        experience.hidden ?  "" :
-                        <div key={experience._id} className={experience.active ? "block" : "hidden" }>
-                            <p>{experience.position}</p>
-                            <p>{experience.from}</p> <span>-</span> <p>{experience.to}</p>
-                            <PortableText value={experience.description}></PortableText>
-                            <p>{experience.roles}</p>
-                            <p>{experience.achievement}</p>
-                            <p>{experience.technologies}</p>
-
-                        </div>
-                       
+                        <ExperienceSectionComponent key={experience._id} experience={experience}></ExperienceSectionComponent>
                     ))
                 }
             </div>

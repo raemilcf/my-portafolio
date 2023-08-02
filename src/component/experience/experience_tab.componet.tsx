@@ -32,6 +32,7 @@ const ExperienceTabComponent : FC<experienceProps> = ( {experience} ) =>{
                         {experience.company}
                 </button>
             </li>
+           
        </>
     )
 }

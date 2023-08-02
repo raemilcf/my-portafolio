@@ -19,6 +19,8 @@ const ExperiencesComponent = () => {
                     experiences.map( (experience) => (
                         experience.hidden ? "" :
                         <ExperienceElementComponent key={experience._id} experience={experience} ></ExperienceElementComponent>
+            
+
                     ))
                 }
             </ul>

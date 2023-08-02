@@ -1,23 +1,20 @@
 import { ExperienceProvider } from "@/src/context/experience.context";
+import LeftSidebarComponent from "../sidebar/left/left_sidebar.componet";
+import RightSidebarComponent from "../sidebar/right/right_sidebar.component";
 
 const HomeComponent = () =>{
 
   return (
-   // <PortafolioContext.Provider value={contextValue}>
-      <div className='flex px-16 py-12 max-auto sm:py-16 lg:px-20'>
-        <div className='flex '>
-          <h1>follow</h1>
-        </div>
-
-        <div className='px-16 flex flex-col sm:py-16 lg:px-20 gap-10'>
+      <div className="relative">
+       <LeftSidebarComponent/>
+       
+        <div className='px-44 py-12 overflow-auto flex flex-col'>
           <ExperienceProvider/>
         </div>
 
-        <div className='flex'>
-          <h1>follow</h1>
-        </div>
+        <RightSidebarComponent/>
+
       </div>
-    //</PortafolioContext.Provider>
   )
 }
 export default HomeComponent;

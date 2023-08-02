@@ -18,7 +18,7 @@ export default async function RootLayout({
     return (
 
         <html lang="en">
-            <body className='flex flex-col text-gray-300 font-poppins h-screen mx-auto bg-gradient-to-b from-cyan-950 to-neutral-950'>
+            <body className='flex flex-col min-h-screen text-gray-300 font-poppins bg-gradient-to-b from-cyan-950 to-neutral-950'>
                 {/* navigation bar  */}
                 <header className='sticky px-6 pt-2 flex justify-between'>
                     <Link href='/' className='flex flex-col items-center
@@ -41,7 +41,7 @@ export default async function RootLayout({
                 <main> 
                     {children}
                 </main>
-                <footer className='mt-9 mb-2 '>
+                <footer className=' mt-auto mb-2 '>
                     <div className='flex flex-col justify-center items-center '>
                         <p className='flex flex-row items-center text-lg gap-2'>Made with <Heart color="white" size={18}/> </p>
                         <p className='text-lg'>&#169; Copyright 2023 Raemil </p>

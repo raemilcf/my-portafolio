@@ -1,5 +1,5 @@
-import { Navbar } from "@/models/Navbar";
-import sanityClientConfig from "../config/client-config";
+import { Navbar } from "@/src/models/Navbar";
+import sanityClientConfig from "../../config/client-config";
 import { createClient, groq } from "next-sanity";
 
 

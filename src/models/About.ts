@@ -9,4 +9,5 @@ export type About = {
     catchPhrase2 : string;
     content : PortableTextBlock[];
     url : string;
+    version: number;
 }

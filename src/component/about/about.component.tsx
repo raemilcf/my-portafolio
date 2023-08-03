@@ -1,33 +1,30 @@
-import {  About } from "@/models/About";
+
+import { AboutContext } from "@/src/context/about.context";
 import { PortableText } from "@portabletext/react";
-import Link from "next/link";
-import { FC } from "react";
+import { useContext } from "react";
 
-type AboutProps = {
-    about : About;
-}
+const  AboutComponent = () =>  {
 
-const  About : FC<AboutProps> =  ({ about }) =>  {
+    const { about } = useContext(AboutContext);
 
     return (
-        <div className="grid ">
+        (about ?  
+        (<div className="">
             <div className="flex flex-col gap-y-3  ">
                 <p className=" text-base ">Hello, my name is</p>
-                <p className=" text-6xl 
+                <p className="text-6xl 
                             bg-gradient-to-r from-pink-300 from-10% via-pink-600 via-30% to-pink-900 to-60% 
                             text-transparent bg-clip-text ">
                             {about.catchPhrase1}
                 </p>
-                <p className="text-5xl h-20
+                <p className="text-4xl  h-16
                             bg-gradient-to-r from-pink-200 from-10% via-pink-400 via-30% to-pink-600 to-60% 
                             text-transparent bg-clip-text ">
                                 {about.catchPhrase2}
                 </p>
-                <div className="flex flex-row w-full mr-12 pr-96">
+                <div className="text-lg flex flex-row w-full mr-12 pr-96">
                     <PortableText value={about.content}></PortableText>
-
                 </div>
-            
                 <a
                 className="mt-3 border-2 rounded-md text-center
                            bg-gradient-to-r from-pink-200 from-10% via-pink-400 via-30% to-pink-600 to-60% text-transparent bg-clip-text
@@ -38,9 +35,11 @@ const  About : FC<AboutProps> =  ({ about }) =>  {
                 target="_blank"
                 >Check out my latest work! </a>
             </div>
-        </div>
+        </div> )
+        : ""
+        )
     );
 
 };
 
-export default About;
+export default AboutComponent;

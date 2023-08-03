@@ -14,9 +14,9 @@ const ExperienceSectionComponent : FC<Props> = ( {experience} ) => {
     <>
     {experience.hidden ?  "" :
     <div key={experience._id} className={experience.active ? "block" : "hidden" }>
-        <p className="text-2xl font-bold text-pink-300">{experience.position}</p>
+        <p className="text-2xl font-bold hover:text-pink-300">{experience.position}</p>
 
-        <div className="flex flex-row gap-1 ">
+        <div className="flex flex-row gap-1 text-gray-400 text-xs">
             <p>{experience.from}</p> <span> - </span><p>{experience.to}</p>
         </div>
 
@@ -55,7 +55,7 @@ const ExperienceSectionComponent : FC<Props> = ( {experience} ) => {
             ))      
         }      
         </div>
-        <div className="mt-5 px-3 grid grid-cols-4 ">
+        <div className="mt-5  grid grid-cols-4 ">
         {
             experience.technologies.map( (tech) => (
                 <div  key={tech} className="flex flex-row">
@@ -65,7 +65,7 @@ const ExperienceSectionComponent : FC<Props> = ( {experience} ) => {
                     height={18}
                     alt="right"
                     />
-                    <p className="text-sm text-pink-300">{tech}</p>        
+                    <p className="text-sm">{tech}</p>        
                 </div>     
             ))
         }

@@ -13,7 +13,10 @@ const ExperiencesComponent = () => {
 
     //show tab with all the experience 
     return (
-        <div className="grid grid-cols-5">
+        <div className=" px-40 pt-4 mt-10 mb-10  ">
+            <p className="mt-5 mb-10 text-3xl text-pink-300 text-center">Real world experience</p>
+
+        <div className="mt-5 grid grid-cols-5">
              <ul className="block col-span-1">
                 {
                     experiences.map( (experience) => (
@@ -30,6 +33,7 @@ const ExperiencesComponent = () => {
                         <ExperienceSectionComponent key={experience._id} experience={experience}></ExperienceSectionComponent>
                     ))
                 }
+            </div>
             </div>
     {/* <ul className="block col-span-2" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
         <li className="border-l-2 hover:border-pink-300">

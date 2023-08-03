@@ -1,23 +1,22 @@
-import { FC } from "react";
+import { useContext } from "react";
 import Image from "next/image";
 
 
-import { Presentation } from "@/src/models/Presentation";
 import { PortableText } from "@portabletext/react";
+import { AboutContext } from "@/src/context/about.context";
 
 
-type ProfileProps ={
-    profile : Presentation ;
-}
+const ProfileComponent = () => {
 
-const ProfileComponent : FC<ProfileProps> = ( {profile} ) => {
-    console.log(profile.photo);
+    const { profile } = useContext(AboutContext);
+
     return (
 
-        <div className="px-24 pt-4  ">
-            <p className="mt-5 mb-10 text-3xl text-pink-300 text-center ">{profile.header}</p>
+        (profile ? 
+        (<div className="px-24 pt-4  ">
+            <p className="mt-10 mb-10 text-3xl text-pink-300 text-right ">{profile.header}</p>
 
-            <div className="grid grid-cols-4  gap-5">
+            <div className="grid grid-cols-5  gap-5">
                     <div className="flex flex-col col-span-3">
                         <div>
                             <PortableText value={profile.content}></PortableText>  
@@ -40,12 +39,12 @@ const ProfileComponent : FC<ProfileProps> = ( {profile} ) => {
                         }
                         </div>
                     </div>
-                    <div className="col-span-1  ml-0 ">
+                    <div className="col-span-2 justify-end ">
                     {
                         profile.photo && (
 
-                            <div className="w-64 rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1">
-                            <div className=" bg-gray-800 back">
+                            <div className="  w-64 rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1">
+                            <div className="  bg-gray-800 back">
                                 <Image 
                                 src={profile.photo}
                                 width={250}
@@ -61,7 +60,9 @@ const ProfileComponent : FC<ProfileProps> = ( {profile} ) => {
                     } 
                     </div>
             </div>
-        </div>
+        </div>) 
+        : ""
+        )
     );
 }
 

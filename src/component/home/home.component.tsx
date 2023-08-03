@@ -1,3 +1,4 @@
+import { AboutProvider } from "@/src/context/about.context";
 import { ExperienceProvider } from "@/src/context/experience.context";
 import { ProjectProvider } from "@/src/context/project.context";
 import LeftSidebarComponent from "../sidebar/left/left_sidebar.componet";
@@ -10,8 +11,9 @@ const HomeComponent = () =>{
        <LeftSidebarComponent/>
        
         <div className='px-44 py-12 overflow-auto flex flex-col'>
-          <ProjectProvider/>
+          <AboutProvider/>
           <ExperienceProvider/>
+          <ProjectProvider/>
         </div>
 
         <RightSidebarComponent/>

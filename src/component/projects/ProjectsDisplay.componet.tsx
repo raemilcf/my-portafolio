@@ -1,16 +1,13 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 
 import ProjectCard from "./project-card.component";
 
 import { Projects } from "@/src/models/Projects";
+import { ProjectContext } from "@/src/context/project.context";
 
 
-
-type ProjectProps = {
-    projects : Projects[];
-}
-
-const  ProjectsDisplayComponent : FC<ProjectProps> =  ({ projects }) =>  {
+const  ProjectsDisplayComponent = () =>  {
+    const { projects } = useContext(ProjectContext);
 
     return (
         <div id="projects">

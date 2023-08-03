@@ -5,7 +5,7 @@
 // {/* client component like button, input, search box, elements client interact with  */}
 
 'use client'
-import { createContext, FC, useEffect, useState } from "react";
+import { createContext,  useEffect, useState } from "react";
 import ExperiencesTabComponent from "../component/experience/experiences.component";
 import { Experience } from "../models/Experience";
 import { getWorkExperience } from "../sanity/api/experience/experience-api";
@@ -25,7 +25,7 @@ export const ExperienceContext = createContext<ExperienceContextData>({
   
 });
   
-  export const ExperienceProvider = ()  =>{
+  export const ExperienceProvider = ()  => {
   
     const [experiences, setExperiences] = useState<Experience[]>([]);
    

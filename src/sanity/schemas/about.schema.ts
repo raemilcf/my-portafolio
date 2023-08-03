@@ -17,6 +17,11 @@ const about ={
         }
     },
     {
+        name: "version",
+        title:"Version",
+        type:'number',
+    },
+    {
         name:'catchPhrase1',
         title: "CatchPhrase1",
         type: "string",

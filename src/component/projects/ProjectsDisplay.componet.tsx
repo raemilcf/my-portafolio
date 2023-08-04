@@ -10,8 +10,8 @@ const  ProjectsDisplayComponent = () =>  {
     const { projects } = useContext(ProjectContext);
 
     return (
-        <div id="projects">
-            <p className="mt-10 mb-10 text-3xl text-pink-300 text-left ">What I have worked on!</p>
+        <div id="projects"  className=" pt-20 mt-20">
+            <p className="mb-16 text-3xl text-pink-300 text-center ">What I have worked on!</p>
             <div className="grid grid-cols-3 gap-4 ">
                 {
                     projects.map( (project) => (

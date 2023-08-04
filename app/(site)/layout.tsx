@@ -41,12 +41,7 @@ export default async function RootLayout({
                 <main> 
                     {children}
                 </main>
-                <footer className=' mt-auto mb-2 '>
-                    <div className='flex flex-col justify-center items-center '>
-                        <p className='flex flex-row items-center text-lg gap-2'>Made with <Heart color="white" size={18}/> </p>
-                        <p className='text-lg'>&#169; Copyright 2023 Raemil </p>
-                    </div>
-                </footer>
+               
                
             </body>
         </html>

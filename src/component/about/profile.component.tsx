@@ -12,9 +12,8 @@ const ProfileComponent = () => {
 
     return (
 
-        (profile ? 
-        (<div className="px-24 pt-4  ">
-            <p className="mt-10 mb-10 text-3xl text-pink-300 text-right ">{profile.header}</p>
+        <div id="profile" className="px-24  pt-20 mt-20 ">
+            <p className=" mb-12 text-3xl text-pink-300 text-left ">{profile.header}</p>
 
             <div className="grid grid-cols-5  gap-5">
                     <div className="flex flex-col col-span-3">
@@ -60,9 +59,7 @@ const ProfileComponent = () => {
                     } 
                     </div>
             </div>
-        </div>) 
-        : ""
-        )
+        </div>
     );
 }
 

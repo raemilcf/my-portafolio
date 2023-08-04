@@ -8,9 +8,8 @@ const  AboutComponent = () =>  {
     const { about } = useContext(AboutContext);
 
     return (
-        (about ?  
-        (<div className="">
-            <div className="flex flex-col gap-y-3  ">
+        <div id="about" className=" pt-20 mt-20">
+            <div className="flex flex-col gap-y-3 ">
                 <p className=" text-base ">Hello, my name is</p>
                 <p className="text-6xl 
                             bg-gradient-to-r from-pink-300 from-10% via-pink-600 via-30% to-pink-900 to-60% 
@@ -35,9 +34,7 @@ const  AboutComponent = () =>  {
                 target="_blank"
                 >Check out my latest work! </a>
             </div>
-        </div> )
-        : ""
-        )
+        </div> 
     );
 
 };

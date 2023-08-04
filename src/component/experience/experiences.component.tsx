@@ -13,8 +13,8 @@ const ExperiencesComponent = () => {
 
     //show tab with all the experience 
     return (
-        <div className=" px-40 pt-4 mt-10 mb-10  ">
-            <p className="mt-5 mb-10 text-3xl text-pink-300 text-center">Real world experience</p>
+        <div id="experiences" className=" px-40  pt-20 mt-20">
+            <p className="mb-10 text-3xl text-pink-300 text-center">Real world experience</p>
 
         <div className="mt-5 grid grid-cols-5">
              <ul className="block col-span-1">

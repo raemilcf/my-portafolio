@@ -22,7 +22,7 @@ const ContactComponent = () => {
                 href={"mailto:" + contact.email}
                 title="mail"
                 target="_blank"
-                >Let's talk!</a>
+                >Let&apos;s talk!</a>
 
             </div>
            

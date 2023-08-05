@@ -6,4 +6,6 @@ export type Navbar= {
     title: string;
     slug: string;
     content : PortableTextBlock[];
+    header: string;
+    email: string;
 }

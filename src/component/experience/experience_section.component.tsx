@@ -14,10 +14,15 @@ const ExperienceSectionComponent : FC<Props> = ( {experience} ) => {
     <>
     {experience.hidden ?  "" :
     <div key={experience._id} className={experience.active ? "block" : "hidden" }>
-        <p className="text-2xl font-bold hover:text-pink-300">{experience.position}</p>
+        <div className="flex flex-row">
+        <p className="text-lg font-bold ">{experience.position}</p>
+        <span className="text-lg text-pink-300">&nbsp;  @</span>
+        <a href={experience.urlCompany} className="text-lg text-pink-300">{experience.company}</a>
+        </div>
+      
 
         <div className="flex flex-row gap-1 text-gray-400 text-xs">
-            <p>{experience.from}</p> <span> - </span><p>{experience.to}</p>
+            <p>{experience.fromDisplay}</p> <span> - </span><p>{experience.to}</p>
         </div>
 
         <div className="mt-4 text-justify text-sm ">
@@ -29,25 +34,27 @@ const ExperienceSectionComponent : FC<Props> = ( {experience} ) => {
             experience.roles.map( (role) => (
                 <div  key={role} className="flex flex-row mb-2">
                     <Image 
-                    src="/target.svg"
-                    width={18}
-                    height={18}
+                    src="/chevron-right.svg"
+                    width={16}
+                    height={16}
                     alt="right"
+                    className="mr-2"
                     />
                     <p className="text-sm ml-1">{role}</p> 
                 </div>
             ))
         }
         </div>
-        <div className="mt-4">
+        <div className="mt-6">
         {
             experience.achievement.map( (achiv) => (
-                <div  key={achiv} className="flex flex-row mb-2">
+                <div  key={achiv} className="flex flex-row mb-2 items-start">
                     <Image 
                     src="/star.svg"
-                    width={18}
-                    height={18}
+                    width={16}
+                    height={16}
                     alt="right"
+                    className="mr-2"
                     />
                     <p className="text-sm ml-1"> {achiv} </p>
                                 

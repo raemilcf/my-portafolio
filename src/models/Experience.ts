@@ -7,11 +7,13 @@ export type Experience= {
     slug: string;
     position: string;
     company: string;
+    urlCompany : string;
     description : PortableTextBlock[];
     roles: string[];
     achievement: string[];
     technologies: string[];
-    from : string;
+    from : Date;
+    fromDisplay : string;
     to: string;
     hidden: boolean;
     active: boolean;

@@ -30,3 +30,20 @@ export async function getPagebySlug() : Promise<Navbar[]>{
         `
     )
 }
+
+export async function getContactDetails() : Promise<Navbar>{
+
+    return createClient(sanityClientConfig).fetch(
+        groq`*[_type == 'page' && title == "contact"][0]{
+            _id,
+            _createdAt,
+            title,
+            header,
+            "slug": slug.current,
+            content,
+            email
+
+        }
+        `
+    )
+}

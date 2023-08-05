@@ -2,8 +2,8 @@ import { AboutProvider } from "@/src/context/about.context";
 import { ExperienceProvider } from "@/src/context/experience.context";
 import { ProjectProvider } from "@/src/context/project.context";
 import LeftSidebarComponent from "../sidebar/left/left_sidebar.componet";
-import RightSidebarComponent from "../sidebar/right/right_sidebar.component";
 import { Heart } from "react-feather";
+import { ContactProvider } from "@/src/context/contact.context";
 
 const HomeComponent = () =>{
 
@@ -16,6 +16,7 @@ const HomeComponent = () =>{
           <AboutProvider/>
           <ExperienceProvider/>
           <ProjectProvider/>
+          <ContactProvider/>
         </div>
         <footer className=' mt-auto mb-2 '>
                     <div className='flex flex-col justify-center items-center '>

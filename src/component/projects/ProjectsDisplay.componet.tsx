@@ -10,7 +10,7 @@ const  ProjectsDisplayComponent = () =>  {
     const { projects } = useContext(ProjectContext);
 
     return (
-        <div id="projects"  className=" pt-20 mt-20">
+        <div id="projects"  className="pt-20 mt-20">
             <p className="mb-16 text-3xl text-pink-300 text-center ">What I have worked on!</p>
             <div className="grid grid-cols-3 gap-4 ">
                 {

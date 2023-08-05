@@ -7,13 +7,14 @@ import { createClient, groq } from "next-sanity";
 export async function getWorkExperience() : Promise<Experience[]>{
 
     return createClient(sanityClientConfig).fetch(
-        groq`*[_type == 'experience'] {
+        groq`*[_type == 'experience'] | order( from desc ) {
             _id,
             _createdAt,
             title,
             "slug": slug.current,
             position,
             company,
+            urlCompany,
             from,
             to,
             roles,

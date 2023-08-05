@@ -12,7 +12,7 @@ const HomeComponent = () =>{
        <LeftSidebarComponent/>
 
        
-        <div className='px-[20%] py-12 overflow-auto flex flex-col'>
+        <div className='px-[15%] py-12 overflow-auto flex flex-col'>
           <AboutProvider/>
           <ExperienceProvider/>
           <ProjectProvider/>

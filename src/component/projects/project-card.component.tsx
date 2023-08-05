@@ -42,7 +42,7 @@ const  ProjectCardComponent : FC<ProjectProps> =  ({ project }) =>  {
                         }
                         {
                             project.url &&
-                            (<a href={project.github} target="_blank" className="mt-4">
+                            (<a href={project.url} target="_blank" className="mt-4">
                                 <Image
                                     src="/external-link.svg"
                                     alt={project.title}

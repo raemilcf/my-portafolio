@@ -29,7 +29,7 @@ const ExperienceTabComponent : FC<experienceProps> = ( {experience} ) =>{
                     aria-selected="false"
                     onClick={changeTab}
                     >
-                        {experience.company}
+                        {experience.position}
                 </button>
             </li>
            

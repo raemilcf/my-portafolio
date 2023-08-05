@@ -8,6 +8,11 @@ const page ={
         type:'string',
     },
     {
+        name: "header",
+        title:"Header",
+        type:'string',
+    },
+    {
         name: 'slug',
         title: 'Slug',
         type: 'slug',
@@ -21,7 +26,13 @@ const page ={
         title: "content",
         type: "array",
         of:[{type: "block"}]
+    },
+    {
+        name:'email',
+        title: "email",
+        type: "email"
     }
+
 
 ]
 }

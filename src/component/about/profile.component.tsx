@@ -16,7 +16,7 @@ const ProfileComponent = () => {
             <p className=" mb-12 text-3xl text-pink-300 text-left ">{profile.header}</p>
 
             <div className="grid grid-cols-5  gap-5">
-                    <div className="flex flex-col col-span-3">
+                    <div className="flex flex-col col-span-3 tracking-wider">
                         <div>
                             <PortableText value={profile.content}></PortableText>  
                         </div>

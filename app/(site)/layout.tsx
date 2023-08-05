@@ -1,7 +1,6 @@
-import { getPages } from '@/src/sanity/api/projects/projects-utils';
+import { getPages } from '@/src/sanity/api/navegation/navegation-api';
 import Link from 'next/link'
 import React from 'react'
-import { Heart } from 'react-feather'
 
 export const metadata = {
     title: 'RC Portafolio',

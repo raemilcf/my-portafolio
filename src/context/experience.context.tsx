@@ -9,6 +9,8 @@ import { createContext,  useEffect, useState } from "react";
 import ExperiencesTabComponent from "../component/experience/experiences.component";
 import { Experience } from "../models/Experience";
 import { getWorkExperience } from "../sanity/api/experience/experience-api";
+import experience from "../sanity/schemas/experience.schema";
+import { getDateFormat } from "../utils/commonUtils";
 
 //type of data of my context 
 export interface ExperienceContextData {
@@ -32,7 +34,7 @@ export const ExperienceContext = createContext<ExperienceContextData>({
     //load all the experiences once
     useEffect( () => {
         const waitExperience = async () => {
-            setExperiences([ ...await getWorkExperience()]);
+            setExperiences( activateFirst( fixFromDateFormat( await getWorkExperience()) ));
         }
 
         waitExperience();
@@ -75,4 +77,24 @@ export const activateExperience = (experiences : Experience[], experience : Expe
       ));
     }
     return [...experiences];
+}
+
+//adjust date to format month -year 
+export const fixFromDateFormat = (experiences: Experience[]) => {
+
+  experiences.map( (exp) => (
+    exp.fromDisplay = getDateFormat(exp.from)
+
+  ))
+
+  return [...experiences];
+
+}
+
+export const activateFirst = (experiences: Experience[]) => {
+
+  experiences[0].active=true; 
+
+  return [...experiences];
+
 }

@@ -27,6 +27,11 @@ const experience ={
         type: "string",
     },
     {
+        name:'companyUrl',
+        title: "Url Company",
+        type: "url"
+    },
+    {
         name:'description',
         title: "Company Description",
         type: "array",
@@ -48,7 +53,7 @@ const experience ={
     {
         name:'from',
         title: "From",
-        type: "string"
+        type: "date"
     },
     {
         name:'to',

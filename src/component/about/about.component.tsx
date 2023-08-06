@@ -8,7 +8,9 @@ const  AboutComponent = () =>  {
     const { about } = useContext(AboutContext);
 
     return (
-        <div id="about" className=" pt-20 mt-20">
+        <div id="about" className=" pt-6 mt-6
+                                    lg:pt-16 lg:mt-16
+                                    xl:pt-20 xl:mt-20">
             <div className="flex flex-col gap-y-3 ">
                 <p className=" text-xs  sm:text-base">Hello, my name is</p>
                 <p className="text-3xl
@@ -43,8 +45,6 @@ const  AboutComponent = () =>  {
                             text-xs
                             sm:text-lg
                             "
-                            
-                    
                     href={about.url}
                     title="my Github"
                     target="_blank"

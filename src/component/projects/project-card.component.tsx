@@ -15,9 +15,9 @@ const  ProjectCardComponent : FC<ProjectProps> =  ({ project }) =>  {
 
     return (
          //flex flex-col justify-between to get the footer effect, same as flex-row for the navbar separation
-        <div key={project._id} className="flex flex-col justify-between p-8 border-2 border-transparent 
-         rounded-md bg-cyan-950
-         gap-3 hover:scale-105 ">
+        <div key={project._id} className="flex flex-col justify-between p-8 border-2 mb-10
+                                        border-transparent rounded-md bg-cyan-950
+                                        gap-3 hover:scale-105 lg:mb-0 ">
 
             <div>
                 {/* show folder icon and github and open page  */}
@@ -27,6 +27,7 @@ const  ProjectCardComponent : FC<ProjectProps> =  ({ project }) =>  {
                     alt={project.title}
                     width={38}
                     height={38}
+                    className=" w-7 lg:w-10"
                     />
                     <div className="flex flex-row gap-3">
                         {
@@ -37,6 +38,7 @@ const  ProjectCardComponent : FC<ProjectProps> =  ({ project }) =>  {
                                     alt={project.title}
                                     width={20}
                                     height={20}
+                                    className=" w-4 lg:w-5"
                                 />
                             </a> ) 
                         }
@@ -48,6 +50,7 @@ const  ProjectCardComponent : FC<ProjectProps> =  ({ project }) =>  {
                                     alt={project.title}
                                     width={20}
                                     height={20}
+                                    className=" w-4 lg:w-5"
                                 />
                             </a> )
                         }
@@ -57,22 +60,23 @@ const  ProjectCardComponent : FC<ProjectProps> =  ({ project }) =>  {
                 {/* title */}
                 {
                     project.url ? 
-                    <a  href={project.url} target="_blank" className="text-lg hover:text-pink-300">
+                    <a  href={project.url} target="_blank" className="text-sm lg:text-lg hover:text-pink-300">
                         {project.title}
                     </a> : 
-                    <p  className="text-lg ">
+                    <p  className="text-sm lg:text-lg ">
                         {project.title}
                     </p> 
                 }
 
                 {/* description  */}
-                <div className="tracking-wide mt-4"> 
+                <div className="tracking-wide mt-2 text-xs lg:text-base lg:mt-4"> 
                     <PortableText value={project.description}></PortableText>
                 </div>
             </div> 
 
             {/* tech used for the project  */}
-            <div className="grid grid-cols-4 gap-2  mt-4 mb-0">
+            <div className="grid grid-cols-3 gap-1 mb-0
+                            xl:grid-cols-4 xl:gap-2  xl:mt-4 ">
                 {
                     project.technologies.map( (tech) =>(
                         <p key={tech} className="text-xs text-pink-300">

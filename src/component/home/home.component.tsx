@@ -24,8 +24,8 @@ const HomeComponent = () =>{
         <footer className=' mt-auto mb-2 '>
                     <div className='flex flex-col justify-center items-center '>
                         <BottomComponent></BottomComponent>
-                        <p className='flex flex-row items-center text-xs sm:text-lg gap-2'>Made with <Heart className="w-3 sm:w-5" color="white" size={18}/> </p>
-                        <p className='text-xs sm:text-lg'>&#169; Copyright 2023 Raemil </p>
+                        <p className='flex flex-row items-center text-xs lg:text-lg gap-2'>Made with <Heart className="w-3 sm:w-5" color="white" size={18}/> </p>
+                        <p className='text-xs lg:text-lg'>&#169; Copyright 2023 Raemil </p>
                     </div>
                 </footer>
 

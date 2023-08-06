@@ -27,7 +27,8 @@ export default async function RootLayout({
                         <p className='tracking-widest text-lg font-extrabold'>raemil</p>
                     
                     </Link>
-                    <div className='flex  items-end gap-5 mb-1'>
+                    {/* temporaly hidden menu for mobile */}
+                    <div className='flex  items-end gap-5 mb-1 invisible sm:visible'>
                         {navbarPages.map( (navbar) => (
                             <Link className='hover:text-gray-500' key={navbar._id} href={`/#${navbar.slug}`} >
                                 {navbar.title}

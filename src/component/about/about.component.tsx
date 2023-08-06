@@ -8,31 +8,49 @@ const  AboutComponent = () =>  {
     const { about } = useContext(AboutContext);
 
     return (
-        <div id="about" className=" pt-20 mt-20">
+        <div id="about" className=" pt-6 mt-6
+                                    lg:pt-16 lg:mt-16
+                                    xl:pt-20 xl:mt-20">
             <div className="flex flex-col gap-y-3 ">
-                <p className=" text-base ">Hello, my name is</p>
-                <p className="text-6xl 
+                <p className=" text-xs  sm:text-base">Hello, my name is</p>
+                <p className="text-3xl
                             bg-gradient-to-r from-pink-300 from-10% via-pink-600 via-30% to-pink-900 to-60% 
-                            text-transparent bg-clip-text ">
+                            text-transparent bg-clip-text  
+                            sm:text-4xl
+                            lg:text-6xl 
+                            ">
                             {about.catchPhrase1}
                 </p>
-                <p className="text-4xl  h-16
+                <p className="text-sm h-16
                             bg-gradient-to-r from-pink-200 from-10% via-pink-400 via-30% to-pink-600 to-60% 
-                            text-transparent bg-clip-text ">
+                            text-transparent bg-clip-text 
+                            sm:text-lg
+                            lg:text-3xl 
+                            xl:text-4xl 
+                             ">
                                 {about.catchPhrase2}
                 </p>
-                <div className="text-lg flex flex-row w-full mr-12 pr-96">
+                <div className="text-xs flex flex-row w-full mr-12 
+                                sm:text-lg
+                                xl:text-2xl
+                                xl:pr-64
+                ">
                     <PortableText value={about.content}></PortableText>
                 </div>
-                <a
-                className="mt-3 border-2 rounded-md text-center
-                           bg-gradient-to-r from-pink-200 from-10% via-pink-400 via-30% to-pink-600 to-60% text-transparent bg-clip-text
-                         border-gray-500 p-2 w-1/4 hover:border-pink-600"
+                <div className="flex flex-row">
+                    <a
+                    className="mt-3 border-2 rounded-md text-center
+                            bg-gradient-to-r from-pink-200 from-10% via-pink-400 via-30% to-pink-600 to-60% text-transparent bg-clip-text
+                            border-gray-500 p-2  hover:border-pink-600
+                            text-xs
+                            sm:text-lg
+                            "
+                    href={about.url}
+                    title="my Github"
+                    target="_blank"
+                    >Check out my latest work! </a>
+                </div>
                 
-                href={about.url}
-                title="my Github"
-                target="_blank"
-                >Check out my latest work! </a>
             </div>
         </div> 
     );

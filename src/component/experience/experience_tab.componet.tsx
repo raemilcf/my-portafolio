@@ -19,8 +19,8 @@ const ExperienceTabComponent : FC<experienceProps> = ( {experience} ) =>{
 
     return (
        <>
-        <li className={experience.active ?  "border-l-2 border-pink-500" : "border-l-2 hover:border-pink-300" }>
-                <button className={experience.active ? "inline-block p-4 text-pink-500" : "inline-block p-4 hover:text-pink-300 hover:scale-110 "}
+        <li className={experience.active ?  " float-left border-b-2 lg:border-l-2 lg:border-b-0 border-pink-500" : " float-left border-b-2 lg:border-l-2 lg:border-b-0 hover:border-pink-300" }>
+                <button className={experience.active ? "inline-block p-2 lg:p-4 text-sm lg:text-base text-pink-500" : "inline-block p-2 lg:p-4 text-sm lg:text-base hover:text-pink-300 hover:scale-110 "}
                     id={experience._id}
                     data-tabs-target={`#${experience._id}`}
                     type="button" 

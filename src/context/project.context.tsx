@@ -1,7 +1,7 @@
 'use client'
 
 import { createContext, useEffect, useState } from "react"
-import ProjectsDisplayComponent from "../component/projects/ProjectsDisplay.componet";
+import ProjectsDisplayComponent from "../component/projects/projects-display.componet";
 import { Projects } from "../models/Projects"
 import { getMyProjects } from "../sanity/api/projects/project-api"
 

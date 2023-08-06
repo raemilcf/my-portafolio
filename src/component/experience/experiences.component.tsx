@@ -12,11 +12,13 @@ const ExperiencesComponent = () => {
 
     //show tab with all the experience 
     return (
-        <div id="experience" className=" pt-20 mt-20">
-            <p className="mb-10 text-3xl text-pink-300 text-center">Real world experience</p>
+        <div id="experience" className="pt-10 mt-10  lg:pt-20 lg:mt-20">
+            <p className="mb-5 text-lg text-pink-300 text-center
+                         lg:mb-10 lg:text-3xl">
+                        Real world experience</p>
 
-        <div className="mt-5 grid grid-cols-6">
-             <ul className="block col-span-2 mr-5">
+        <div className="mt-2 flex flex-col lg:grid lg:grid-cols-6 lg:mt-5">
+             <ul className="flex items center justify-center overflow-x-auto lg:block lg:col-span-2 lg:mr-5">
                 {
                     experiences.map( (experience) => (
                         experience.hidden ? "" :
@@ -24,7 +26,7 @@ const ExperiencesComponent = () => {
                     ))
                 }
             </ul>
-            <div className="block col-span-4">
+            <div className=" lg:block mt-5 lg:mt-0 lg:col-span-4">
                 {
                     experiences.map( (experience) => (
                         <ExperienceSectionComponent key={experience._id} experience={experience}></ExperienceSectionComponent>

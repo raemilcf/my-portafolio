@@ -5,7 +5,7 @@ import { Mail } from "react-feather";
 const LeftSidebarComponent = () => {
 
     return (
-        <div className='fixed bottom-3 left-0 w-32 '>
+        <div className='invisible sm:visible fixed bottom-3 left-0 w-32 '>
           <div className="flex flex-col gap-4 items-center m-0 p-0">
             <a target='_blank' href="mailto:raemilcorniel@hotmail.com">
               <Mail color="#F9A8D4" size={18}/>
@@ -31,6 +31,7 @@ const LeftSidebarComponent = () => {
             <hr className="w-46 h-2 border-1 border-pink-300 border-dashed "/>
           </div>
       </div>
+      
     )
 }
 

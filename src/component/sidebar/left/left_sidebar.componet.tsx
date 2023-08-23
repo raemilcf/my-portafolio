@@ -12,7 +12,7 @@ const LeftSidebarComponent = () => {
             </a>
             <a target="_blank" href="https://linkedin.com/in/raemilcorniel">
               <Image
-              src="/linkedin.svg"
+              src="linkedin.svg"
               alt='linkedin image'
               width={20}
               height={20}
@@ -20,7 +20,7 @@ const LeftSidebarComponent = () => {
             </a>
             <a target="_blank" href="https://github.com/raemilcf">
               <Image
-              src="/github.svg"
+              src="github.svg"
               alt='github image'
               width={20}
               height={20}

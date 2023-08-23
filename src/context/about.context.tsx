@@ -9,10 +9,6 @@ import { getAboutMe } from "../sanity/api/about-me/about-api";
 import { getProfilePresentation } from "../sanity/api/about-me/presentation-api";
 
 
-export interface AboutContextData {
-    about : About ;
-    profile: Presentation ;
-}
 const aboutInitialValues :About = {
     _id : '',
     _createdAt : new Date,
@@ -35,9 +31,15 @@ const presentationInitialValues : Presentation = {
     technologies: [],
     content: [],
 }
+
+
+export interface AboutContextData {
+    about : About ;
+    profile: Presentation ;
+}
 export const AboutContext = createContext<AboutContextData>({
     about : {} as About,
-    profile : {} as Presentation,
+    profile : {} as Presentation
 })
 
 export const AboutProvider = () =>{
@@ -55,9 +57,11 @@ export const AboutProvider = () =>{
 
     },[]);
 
+
     const value = {
         about,
-        profile
+        profile,
+       
     }
 
     return (

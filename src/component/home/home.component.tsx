@@ -10,6 +10,7 @@ import BottomComponent from "../sidebar/bottom/bottom.component";
 
 const HomeComponent = () =>{
 
+  
   return (
       <div className="relative">
        <LeftSidebarComponent/>

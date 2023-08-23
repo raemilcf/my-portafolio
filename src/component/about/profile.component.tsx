@@ -23,15 +23,18 @@ const ProfileComponent = () => {
                             lg:grid-cols-5  lg:gap-5">
                     <div className="flex flex-col  tracking-wider
                                     lg:col-span-3">
-                        <div className="text-sm text-center
+
+                        <div className="text-sm text-center tracking-wider
                                         lg:text-base lg:text-left">
+
                             <PortableText value={profile.content}></PortableText>  
                         </div>
-                        <div className="mt-5 px-3 grid grid-cols-2
-                                        xl:grid-cols-4 ">
+                        <div className="mt-5 px-3 grid grid-cols-2 pl-[25%]
+                                        lg:grid-cols-3 lg:pl-0
+                                        xl:grid-cols-4 xl:pl-0  ">
                         {
                             profile.technologies.map( (tech) => (
-                                <div  key={tech} className="flex flex-row">
+                                <div  key={tech} className="flex flex-row ">
                                     <Image 
                                     src="/chevron-right.svg"
                                     width={18}
@@ -46,7 +49,7 @@ const ProfileComponent = () => {
                         }
                         </div>
                     </div>
-                    <div className=" items-center mt-10 ml-[25%]
+                    <div className=" items-center mt-10 pl-[35%]
                                     lg:col-span-2 lg:justify-end lg:mt-0 lg:ml-0">
                     {
                         profile.photo && (

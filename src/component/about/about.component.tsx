@@ -21,7 +21,7 @@ const  AboutComponent = () =>  {
                             ">
                             {about.catchPhrase1}
                 </p>
-                <p className="text-sm h-16
+                <p className="text-sm 
                             bg-gradient-to-r from-pink-200 from-10% via-pink-400 via-30% to-pink-600 to-60% 
                             text-transparent bg-clip-text 
                             sm:text-lg

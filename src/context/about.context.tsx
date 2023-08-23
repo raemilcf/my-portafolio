@@ -9,10 +9,6 @@ import { getAboutMe } from "../sanity/api/about-me/about-api";
 import { getProfilePresentation } from "../sanity/api/about-me/presentation-api";
 
 
-export interface AboutContextData {
-    about : About ;
-    profile: Presentation ;
-}
 const aboutInitialValues :About = {
     _id : '',
     _createdAt : new Date,
@@ -35,14 +31,25 @@ const presentationInitialValues : Presentation = {
     technologies: [],
     content: [],
 }
+
+
+export interface AboutContextData {
+    about : About ;
+    profile: Presentation ;
+    menuActive : boolean;
+    isMenuActive: (isActive : boolean) => void;
+}
 export const AboutContext = createContext<AboutContextData>({
     about : {} as About,
     profile : {} as Presentation,
+    menuActive : false,
+    isMenuActive: () => {}
 })
 
 export const AboutProvider = () =>{
     const [about, setAbout] = useState<About>(aboutInitialValues);
     const [profile, setProfile] = useState<Presentation>(presentationInitialValues);
+    const [menuActive, setMenuActive] = useState<boolean>(false);
 
     useEffect( () => {
         const waitAbout = async() => {
@@ -55,9 +62,16 @@ export const AboutProvider = () =>{
 
     },[]);
 
+    const isMenuActive = (isActive : boolean) => {
+        // update experience active 
+        setMenuActive(!isActive);
+   }
+
     const value = {
         about,
-        profile
+        profile,
+        menuActive,
+        isMenuActive
     }
 
     return (

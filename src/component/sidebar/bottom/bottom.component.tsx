@@ -13,7 +13,7 @@ const BottomComponent = ()  => {
         </a>
         <a target="_blank" href="https://linkedin.com/in/raemilcorniel">
           <Image
-          src="/linkedin.svg"
+          src="/applinkedin.svg"
           alt='linkedin image'
           width={14}
           height={14}

@@ -36,7 +36,7 @@ const ProfileComponent = () => {
                             profile.technologies.map( (tech) => (
                                 <div  key={tech} className="flex flex-row ">
                                     <Image 
-                                    src="chevron-right.svg"
+                                    src="/chevron-right.svg"
                                     width={18}
                                     height={18}
                                     alt="right"

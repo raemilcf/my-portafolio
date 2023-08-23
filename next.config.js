@@ -1,13 +1,6 @@
 /** @type {import('next').NextConfig} */
 
-
-const isProd = process.env.NODE_ENV === 'production'
- 
-
 const nextConfig = {
-output: 'export',
-    
-basePath: '/github-pages',
 
 images:{
     domains: ['cdn.sanity.io'],
@@ -19,8 +12,6 @@ images:{
         }
     ]
 },
-assetPrefix: isProd ? '/my-portafolio' : undefined,
-
 }
 
 module.exports = nextConfig

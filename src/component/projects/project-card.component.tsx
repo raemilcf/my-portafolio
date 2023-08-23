@@ -23,7 +23,7 @@ const  ProjectCardComponent : FC<ProjectProps> =  ({ project }) =>  {
                 {/* show folder icon and github and open page  */}
                 <div className="flex flex-row justify-between mb-5 ">
                     <Image
-                    src="folder.svg"
+                    src="/folder.svg"
                     alt={project.title}
                     width={38}
                     height={38}
@@ -34,7 +34,7 @@ const  ProjectCardComponent : FC<ProjectProps> =  ({ project }) =>  {
                             project.github &&
                            ( <a href={project.github} target="_blank" className="mt-4" >
                                 <Image
-                                    src="github.svg"
+                                    src="/github.svg"
                                     alt={project.title}
                                     width={20}
                                     height={20}
@@ -46,7 +46,7 @@ const  ProjectCardComponent : FC<ProjectProps> =  ({ project }) =>  {
                             project.url &&
                             (<a href={project.url} target="_blank" className="mt-4">
                                 <Image
-                                    src="external-link.svg"
+                                    src="/external-link.svg"
                                     alt={project.title}
                                     width={20}
                                     height={20}

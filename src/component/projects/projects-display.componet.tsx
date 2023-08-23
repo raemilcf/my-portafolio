@@ -1,8 +1,7 @@
-import { FC, useContext } from "react";
+import { useContext } from "react";
 
 import ProjectCard from "./project-card.component";
 
-import { Projects } from "@/src/models/Projects";
 import { ProjectContext } from "@/src/context/project.context";
 
 

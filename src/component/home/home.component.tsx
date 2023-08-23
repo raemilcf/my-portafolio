@@ -6,7 +6,6 @@ import { ContactProvider } from "@/src/context/contact.context";
 
 import { Heart } from "react-feather";
 import BottomComponent from "../sidebar/bottom/bottom.component";
-import HeaderComponent from "../header/header.component";
 import { HeaderProvider } from "@/src/context/header.context";
 
 

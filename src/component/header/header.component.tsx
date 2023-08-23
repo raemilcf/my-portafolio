@@ -1,7 +1,6 @@
-import { FC, useContext } from "react";
+import { useContext } from "react";
 import { HeaderContext } from "@/src/context/header.context";
 
-import { Navbar } from "@/src/models/Navbar";
 
 import Link from "next/link";
 import { Menu } from "react-feather";

@@ -2,6 +2,15 @@
 
 const nextConfig = {
 
+    async rewrites() {
+        return [
+          {
+            source: '/about',
+            destination: '/',
+          },
+        ]
+      },
+
 images:{
     domains: ['cdn.sanity.io'],
     remotePatterns:[

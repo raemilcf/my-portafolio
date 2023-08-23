@@ -9,7 +9,6 @@ import { createContext,  useEffect, useState } from "react";
 import ExperiencesTabComponent from "../component/experience/experiences.component";
 import { Experience } from "../models/Experience";
 import { getWorkExperience } from "../sanity/api/experience/experience-api";
-import experience from "../sanity/schemas/experience.schema";
 import { getDateFormat } from "../utils/commonUtils";
 
 //type of data of my context 
